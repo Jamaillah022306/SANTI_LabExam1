@@ -1,0 +1,27 @@
+CREATE TABLE `students` (
+    `id`          INT(11)      NOT NULL AUTO_INCREMENT,
+    `id_number`   VARCHAR(20)  NOT NULL,
+    `first_name`  VARCHAR(50)  NOT NULL,
+    `last_name`   VARCHAR(50)  NOT NULL,
+    `email`       VARCHAR(100) NOT NULL,
+    `course`      VARCHAR(50)  NOT NULL,
+    `created_at`  TIMESTAMP    NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `updated_at`  TIMESTAMP    NOT NULL DEFAULT CURRENT_TIMESTAMP
+                                        ON UPDATE CURRENT_TIMESTAMP,
+
+    PRIMARY KEY (`id`),
+    UNIQUE KEY `uq_id_number` (`id_number`),
+    UNIQUE KEY `uq_email`     (`email`)
+
+) ENGINE=InnoDB
+  DEFAULT CHARSET=utf8mb4
+  COLLATE=utf8mb4_unicode_ci
+  AUTO_INCREMENT=1
+  COMMENT='Stores student records';
+
+INSERT INTO `students`
+    (`id_number`, `first_name`, `last_name`, `email`, `course`)
+VALUES
+    ('3332211', 'Test',         'Test',      'test@test.com',                        'BSCS-SA'),
+    ('517307',  'Wilbert',      'Alfornon',  'wilbertjosh.alfornon@umindanao.edu.ph', 'BSCS'),
+    ('213123',  'Wilbert John', 'Handlers',  'wilbertjosh.alfornon@umindanao.edu.ph2','BSIT');
