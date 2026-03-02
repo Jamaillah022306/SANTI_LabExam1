@@ -120,13 +120,13 @@ $courses = ['BSCS', 'BSCS-SA', 'BSIT', 'BSIS', 'BSECE', 'BSCE', 'BSME', 'BSN', '
 <body>
 
 <div class="topbar">
-    <h1>&#127979; Student Records</h1>
+    <h1>Student Records</h1>
     <a href="home.php">&#8592; Back to List</a>
 </div>
 
 <div class="container">
     <div class="card">
-        <h2>&#9998; Edit Student Record</h2>
+        <h2>Edit Student Record</h2>
         <span class="editing-badge">
             Editing: <strong><?= htmlspecialchars($student['first_name'] . ' ' . $student['last_name']) ?></strong>
             &mdash; ID: <?= htmlspecialchars($student['id_number']) ?>
@@ -182,7 +182,7 @@ $courses = ['BSCS', 'BSCS-SA', 'BSIT', 'BSIS', 'BSECE', 'BSCE', 'BSME', 'BSN', '
             </div>
 
             <div class="form-actions">
-                <button type="submit" class="btn btn-submit">&#128190; Save Changes</button>
+                <button type="submit" class="btn btn-submit">Save Changes</button>
                 <a href="home.php" class="btn btn-cancel">Cancel</a>
             </div>
 
